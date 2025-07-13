@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Malla Curricular Interactiva</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fffdf9;
+            margin: 40px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .año {
+            margin-bottom: 50px;
+        }
+        .año h2 {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .materias {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .materia {
+            padding: 20px 25px;
+            border-radius: 14px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+        .materia.tachada {
+            text-decoration: line-through;
+            color: #888;
+            opacity: 0.7;
+        }
+        /* Colores pastel por año */
+        .año-1 .materia { background-color: #ffe0e0; }
+        .año-2 .materia { background-color: #e0f7fa; }
+        .año-3 .materia { background-color: #e0f5e9; }
+        .año-4 .materia { background-color: #f3e5f5; }
+        .año-5 .materia { background-color: #fff3cd; }
+        .año-6 .materia { background-color: #dcedc8; }
+        .año-7 .materia { background-color: #f8bbd0; }
+    </style>
+</head>
+<body>
+
+    <h1>📘 Malla Curricular Interactiva</h1>
+
+    <div class="año año-1">
+        <h2>🧪 Primer Año</h2>
+        <div class="materias">
+            <div class="materia">Introducción a la Biología Celular y Molecular</div>
+            <div class="materia">Introducción a la Bioestadística</div>
+            <div class="materia">Salud, Humanidades y Bioética</div>
+            <div class="materia">Aprendizaje en Territorio 1</div>
+            <div class="materia">Biología Celular y Molecular</div>
+            <div class="materia">Aprendizaje en Territorio 2</div>
+        </div>
+    </div>
+
+    <div class="año año-2">
+        <h2>🧬 Segundo Año</h2>
+        <div class="materias">
+            <div class="materia">Anatomía</div>
+            <div class="materia">Histología y Biofísica</div>
+            <div class="materia">Historia de la Medicina</div>
+            <div class="materia">CBCC3 - Neurociencias</div>
+            <div class="materia">CBCC4 - Cardiovascular y Respiratorio</div>
+        </div>
+    </div>
+
+    <div class="año año-3">
+        <h2>🧠 Tercer Año</h2>
+        <div class="materias">
+            <div class="materia">CBCC5 - Digestivo, Renal, Endocrino, Metabólico y Reproductor</div>
+            <div class="materia">CBCC6 - Hematología e Inmunobiología</div>
+            <div class="materia">Metodología Científica 1</div>
+        </div>
+    </div>
+
+    <div class="año año-4">
+        <h2>👩‍⚕️ Cuarto Año</h2>
+        <div class="materias">
+            <div class="materia">Medicina en el Primer Nivel de Atención</div>
+            <div class="materia">Bases Científicas de la Patología</div>
+            <div class="materia">Pediatría</div>
+            <div class="materia">Ginecología y Neonatología</div>
+        </div>
+    </div>
+
+    <div class="año año-5">
+        <h2>🩺 Quinto Año</h2>
+        <div class="materias">
+            <div class="materia">Clínica Médica</div>
+            <div class="materia">Psiquiatría y Medicina del Trabajo</div>
+        </div>
+    </div>
+
+    <div class="año año-6">
+        <h2>🏥 Sexto Año</h2>
+        <div class="materias">
+            <div class="materia">Clínica Quirúrgica</div>
+            <div class="materia">Patología Quirúrgica</div>
+            <div class="materia">Medicina Familiar y Comunitaria</div>
+            <div class="materia">Metodología Científica 2</div>
+        </div>
+    </div>
+
+    <div class="año año-7">
+        <h2>🎓 Séptimo Año</h2>
+        <div class="materias">
+            <div class="materia">Internado Obligatorio</div>
+        </div>
+    </div>
+
+    <script>
+        const materias = document.querySelectorAll('.materia');
+        materias.forEach(materia => {
+            materia.addEventListener('click', () => {
+                materia.classList.toggle('tachada');
+            });
+        });
+    </script>
+
+</body>
+</html>
